@@ -1,0 +1,12 @@
+Terminology:
+GND: Ground.
+VCC: Voltage Common Collector.
+I2C: Inter-Integrated Circuit.
+SDA: Serial Data. 
+SCL: Serial Clock.
+------------
+Setup procedure:
+1. Wire GND pin in accelerometer to Physical Pin 6 (GND) in Raspberry Pi
+2. Wire VCC pin in accelerometer to Physical Pin 1 (3V3 i.e. 3.3 Volts Pin) in Raspberry Pi
+3. Wire SDA pin in accelerometer to Physical Pin 3 (SDA) in Raspberry Pi
+4. Wire SCL pin in accelerometer to Physical Pin 5 (SCL) in Raspberry Pi
