@@ -1,0 +1,37 @@
+Before getting our Raspberry Pi to retrieve data from the accelerometer, we must make sure that
+1. Our Raspberry Pi's software is up-to-date
+2. Enable I2C in the Raspberry Pi (see physicalSetup to know more about I2C)
+
+(NOTE: all the following actions must be done through the terminal unless stated otherwise)
+
+1.  Making Raspberry Pi's software is up-to-date
+Use the following commands to update and upgrade the Raspberry:
+sudo apt-get update
+sudo apt-get upgrade
+
+2. Enabling I2C in the Raspberry Pi 
+First, after having updated and upgraded the Raspberry, launch the Raspberry's configuration tool to enable I2C in the Raspberry:
+sudo raspi-config
+(Note: sudo allows you to run programs with the security privileges of another user, by default the superuser / admin)
+
+Second, you will get a menu of options. 
+Navigate using arrow keys.
+Go to Interfacing Options, which is option 5.
+Press enter to select.
+
+Third, in the Interfacing Options menu, select the option P5 I2C.
+When asked to enable ARM I2C interface, select yes.
+
+Fourth, having enabled the I2C interface in the Raspberry, restart the Raspberry using:
+sudo reboot
+
+Fifth, having restarted the Raspberry, we must install the packages needed to interact with the accelerometer using:
+sudo apt-get install python3-dev python3-pip python3-smbus i2c-tools -y
+
+Sixth, having installed the necessary packages, we can test whether the Raspberry can actually interface the accelerometer.
+To do this, use:
+sudo i2cdetect -y 1
+You must get some output. 
+If nothing appears then make sure you have connected your ADXL345 accelerometer to the Raspberry correctly.
+Also check that all solder points on the pins of the sensor are clean. 
+If you see an error try re-enabling I2C again.
