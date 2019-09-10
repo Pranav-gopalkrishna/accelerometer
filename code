@@ -4,7 +4,7 @@ For the code, we will be using ready-made libraries.
 
 First, we must download and install Adafruit’s ADXL34x Python library. 
 To install it so we can use it, use:
-sudo pip3 install adafruit-circuitpython-ADXL34x.
+sudo pip3 install adafruit-circuitpython-ADXL34x
 
 ------------
 
